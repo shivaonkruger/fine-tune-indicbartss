@@ -1,0 +1,40 @@
+# ---------- Heavy files: re-created locally, never committed ----------
+
+# Base model (~976 MB) - re-download with: python download.py
+models/IndicBARTSS/
+
+# Dataset CSVs (~322 MB) - re-download with: python download.py
+data/
+
+# Training snapshots (~50 MB each, incl. optimizer state) - only for resuming training
+checkpoints/
+
+# Hugging Face download metadata
+.cache/
+
+# Fine-tuned LoRA adapters (~17 MB) are committed on purpose so a fresh clone can run
+# the app without retraining. Uncomment to keep them out of git as well:
+# models/indicbartss-lora/
+
+# Any stray weight files anywhere else
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.ipynb
+
+# ---------- Environments / editors / OS ----------
+.venv/
+venv/
+.env
+.streamlit/secrets.toml
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
